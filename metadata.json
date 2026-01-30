@@ -1,0 +1,7 @@
+{
+  "name": "AeroSync Secure",
+  "description": "A high-performance, secure local file transfer system dashboard. Features device discovery, encrypted transfer visualization, and a comprehensive system architecture reference.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
