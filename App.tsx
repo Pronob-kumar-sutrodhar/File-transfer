@@ -4,6 +4,8 @@ import { DiscoveryRadar } from './components/DiscoveryRadar';
 import { TransferManager } from './components/TransferManager';
 import { ArchitectureDoc } from './components/ArchitectureDoc';
 import { AuditPanel } from './components/AuditPanel';
+import { ServerGenerator } from './components/ServerGenerator';
+import { AndroidGenerator } from './components/AndroidGenerator';
 import { UserGuide } from './components/UserGuide';
 import { Tab, Peer } from './types';
 import { MOCK_PEER_POOL } from './constants';
@@ -80,11 +82,15 @@ const App: React.FC = () => {
             <div>
               <h1 className="text-2xl font-bold text-white tracking-tight">
                 {activeTab === Tab.TRANSFER && 'Transfer Hub'}
+                {activeTab === Tab.ANDROID_GEN && 'Android Client'}
+                {activeTab === Tab.SERVER_GEN && 'Backend Generator'}
                 {activeTab === Tab.ARCHITECTURE && 'Architecture & Design'}
                 {activeTab === Tab.AI_AUDIT && 'Security Audit'}
               </h1>
               <p className="text-slate-400 text-sm mt-1">
                 {activeTab === Tab.TRANSFER && 'Manage local connections and file transfers'}
+                {activeTab === Tab.ANDROID_GEN && 'Generate Kotlin code for your Android project'}
+                {activeTab === Tab.SERVER_GEN && 'Generate and download the Python receiver script'}
                 {activeTab === Tab.ARCHITECTURE && 'Technical specifications and implementation details'}
                 {activeTab === Tab.AI_AUDIT && 'AI-driven vulnerability assessment'}
               </p>
@@ -122,6 +128,14 @@ const App: React.FC = () => {
               </div>
             )}
             
+            {activeTab === Tab.ANDROID_GEN && (
+                <AndroidGenerator />
+            )}
+            
+            {activeTab === Tab.SERVER_GEN && (
+               <ServerGenerator />
+            )}
+
             {activeTab === Tab.ARCHITECTURE && (
               <ArchitectureDoc />
             )}

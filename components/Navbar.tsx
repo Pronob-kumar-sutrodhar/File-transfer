@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, FileText, ShieldCheck, HelpCircle, LogOut } from 'lucide-react';
+import { LayoutDashboard, FileText, ShieldCheck, HelpCircle, LogOut, Code2, Smartphone } from 'lucide-react';
 import { Tab } from '../types';
 
 interface NavbarProps {
@@ -11,6 +11,8 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange, onShowGuide }) => {
   const navItems = [
     { id: Tab.TRANSFER, label: 'Transfer Hub', icon: LayoutDashboard },
+    { id: Tab.ANDROID_GEN, label: 'Get Android Code', icon: Smartphone },
+    { id: Tab.SERVER_GEN, label: 'Get Server Code', icon: Code2 },
     { id: Tab.ARCHITECTURE, label: 'System Architecture', icon: FileText },
     { id: Tab.AI_AUDIT, label: 'AI Security Audit', icon: ShieldCheck },
   ];

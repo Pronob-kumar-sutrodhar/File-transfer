@@ -25,10 +25,13 @@ export interface ArchitectureSection {
   title: string;
   content: string;
   codeSnippet?: string;
+  language?: 'python' | 'kotlin' | 'json';
 }
 
 export enum Tab {
   TRANSFER = 'TRANSFER',
   ARCHITECTURE = 'ARCHITECTURE',
-  AI_AUDIT = 'AI_AUDIT'
+  AI_AUDIT = 'AI_AUDIT',
+  SERVER_GEN = 'SERVER_GEN',
+  ANDROID_GEN = 'ANDROID_GEN'
 }
